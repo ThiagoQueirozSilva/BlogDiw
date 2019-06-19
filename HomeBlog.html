@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="HomeBlog.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body onload="init()">
+        
+    <div class=header>
+        <header>
+             <a href="HomeBlog.html"><h3>Home</h3></a>
+             <ul>
+                 <li><a href="HomeBlog.html">CONTATO</a></li>
+                 <li><a href="HomeBlog.html">SOBRE</a></li>
+                 <li><a href="HomeBlog.html">OBJETIVOS</a></li>
+                 <li><a href="HomeBlog.html">AJUDA</a></li>
+             </ul>
+        </header>
+       <div class=titulo>    
+        <h1>-----BLOGTQ-----</h1>
+        <form  method="get" action="javascript: abrir();">
+                <button class="fazer-postagem" type="submit">POSTAR</button>
+            </form>
+       </div>    
+    </div>
+    <div>
+    <form id="form-post">
+            <a href="javascript: fechar();"><i class="fas fa-arrow-circle-left" style= "font-size: 50px; color:black;" ></i></a>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">Id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputtitulo">Titulo (*)</label>
+                    <input type="text" class="form-control" id="inputtitulo" required placeholder="Informe o titulo da postagem">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label for="inputdata">Data da postagem (*)</label>
+                    <input type="date" class="form-control" id="inputdata" required placeholder="Data da postagem" disabled="">
+                </div>
+                <div class="col-sm-7">
+                    <label for="inputimagem">imagem(url) (*)</label>
+                    <input type="url" class="form-control" id="inputimagem" required placeholder="imagem(url)">
+                </div>
+                <div class="col-sm-12">
+                        <label for="inputdescricao">Descricao (*)</label>
+                        <input type="text" class="form-control" id="inputdescricao" required placeholder="informe a descricao" size="100">
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="inputdescricao">Escreva o texto aqui. (*)</label>
+                        <input type="text" class="form-control" id="inputlermais" required placeholder="informe o texto completo" size="100">
+                    </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input  type="button" onClick="parent.location='HomeBlog.html'" class="btn btn-success" id="btnInsert" value="postar">
+            </div> 
+            
+    </form>   
+    </div>      
+
+
+
+    <div id=postagens>
+            
+        <div id=item-posts>
+                         
+            <div class=posts id=ids()>
+                <div class=post-img><img src="https://www.topimagens.com.br/imagens/imagens-mais-novas.jpg"></div>
+                <h2 class=post-titulo>O TITULO DA POSTAGEM</h2>
+                <p class=data >Postado no dia: XX/XX/XXXX</p>
+                <p class=descricao>NAO FAZ PARTE DO JSON ESTE POST ESTA NO HTML</p>
+                <form  method="get" action="post.html">
+                    <button class="leia-mais" type="submit">Leia Mais</button>
+                </form>
+
+                
+            </div>
+            <div class="conteudo"> 
+                <img src="https://www.topimagens.com.br/imagens/imagens-mais-novas.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?</p>
+               </div>
+            </div> 
+            
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="fakeblog.js"></script>
+    <script type="text/javascript">
+    function abrir(){
+         document.getElementById('form-post').style.display = 'block'
+    }
+    function fechar(){
+         document.getElementById('form-post').style.display = 'none'
+    }      
+    </script>
+    <script>
+         function exibepostagens() {
+            // Remove todas as linhas do corpo da tabela
+            
+
+            // Popula a tabela com os registros do banco de dados
+            for (i = dbthiagosilva.dados.length-1; i >= 0; i--) {
+                let post = dbthiagosilva.dados[i];
+                $("#item-posts").append(`<div class=posts id=${i}>  <div class=post-img><img  src="${post.imagem}"></div> <h2 class=post-titulo>${post.titulo}</h2> <p class=data>${post.data}</p> <p class=descricao>${post.descricao}</p>   <button class="leia-mais" type="submit" onclick="window.location.href = 'post.html?id=${i}';" href="post.html">Leia Mais</button></div>
+    
+                                        <div class=conteudo id=${i}>  <img  src ="${post.imagem}"> <p>${post.descricao}</p> </div>`);
+            }
+        }
+
+
+        
+        function init() {
+            // Adiciona funções para tratar os eventos
+            $("#btnInsert").click(function () {
+                // Verfica se o formulário está preenchido corretamente
+                if (!$('#form-post')[0].checkValidity()) {
+                    displayMessage("Preencha o formulário corretamente.");
+                    return;
+                } 
+              
+                // Obtem os valores dos campos do formulário
+                let campotitulo = $("#inputtitulo").val();
+                let campodata = $("#inputdata").val();
+                let campodescricao = $('#inputdescricao').val();
+                let campoimagem = $('#inputimagem').val();
+                let campolermais = $('#inputlermais').val();
+                let post = { titulo: campotitulo, data: campodata, descricao: campodescricao, imagem: campoimagem, lermais: campolermais,};
+                
+                insertpostagem(post);
+
+                // Reexibe os contatos
+                exibepostagens();
+
+                // Limpa o formulario
+                $("#form-post")[0].reset();
+
+            });
+            function loadUrl(newLocation)
+            {
+            window.location = newLocation;
+            return false;
+            }
+     
+            exibepostagens();
+        }
+
+
+
+        $(document).ready( function() {
+    			var now = new Date();
+ 
+    			var day = ("0" + now.getDate()).slice(-2);
+        		var month = ("0" + (now.getMonth() + 1)).slice(-2);
+    			var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+   				$('#inputdata').val(today);
+			});
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</body>
+
+</html>
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perspiciatis consectetur ducimus inventore neque similique itaque officia illo voluptatibus, deserunt magnam, modi possimus animi. Doloremque maiores eligendi et distinctio id?

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   
+</head>
+<body>
+    <div class=header>
+        <header>
+             <a href="HomeBlog.html"><h3>Home</h3></a>
+             <ul>
+                 <li><a href="HomeBlog.html">CONTATO</a></li>
+                 <li><a href="HomeBlog.html">SOBRE</a></li>
+                 <li><a href="HomeBlog.html">OBJETIVOS</a></li>
+                 <li><a href="HomeBlog.html">AJUDA</a></li>
+             </ul>
+        </header>
+    </div>    
+       <div class=titulo>    
+        <h1>-----BLOGTQ-----</h1>
+       </div>
+       <div id="conteudo"> 
+        <h2>O TITULO DA POSTAGEM</h2>  
+        <img src="https://www.topimagens.com.br/imagens/imagens-mais-novas.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum officiis debitis dignissimos nemo illum illo quia, officia quas! Perspiciatis dolorem ipsa dolore impedit vero repellat explicabo magni? Asperiores, quo?</p>
+       </div>
+
+
+
+       <div class="like">
+       <a href="#" class="like-counter"><i class="far fa-thumbs-up" style="font-size:80px;"></i></a><span class="click-text"><a id="clicks"></span>
+       </div> 
+
+
+
+        <div id="comentarios" class="comentarios">
+            <span><br>Comentários</span><br>
+            <input type="text" id="nombre" class="nombre" placeholder="Nome" />
+            <div id="nuevo" class="nuevo">
+                <textarea id="textarea" placeholder="Deixe seu comentário"></textarea autofocus>
+                    <button id="boton" class="boton">Enviar</button>
+            </div>
+      </div>
+    
+      
+   
+
+   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="fakeblog.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        localStorage.setItem('id', id);
+
+        var conteudo = '';
+        conteudo += `<h2>${dbthiagosilva.dados[id].titulo}</h2><img src="${dbthiagosilva.dados[id].imagem}">  <p>${dbthiagosilva.dados[id].lermais}</p>`
+        document.getElementById('conteudo').innerHTML = conteudo;
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="like.js"></script>
+</body>
+
+</html>

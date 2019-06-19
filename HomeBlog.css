@@ -1,0 +1,157 @@
+header{
+    background-color:black;
+    height:38px;
+    width:101%;
+    margin-left:-10px;
+    margin-top:-8px;
+}
+
+/*Menu e a tecla HOME*/
+.header h3{
+    float:left;
+    color:white;
+    font-size:30px;
+    margin-top:0px;
+}
+
+
+.header ul{
+    margin: 0;
+    background-color:black;
+    list-style: none;
+    float: right;
+    margin-top:3px;
+   }
+   .header ul li{
+    display: inline;
+ 
+   }
+   .header ul li a{
+    padding: 2px 10px;
+    display: inline-block;
+    color: white ;
+    text-decoration: none;
+    
+   }
+   .header ul li a:hover{
+    background-color:red;
+   }
+
+   .header a h3:hover{
+    background-color:red;
+   }   
+
+
+/*TITULO*/
+.titulo h1{
+    font-size:80px;
+    text-align: center;
+    font-family:  cursive
+}
+
+.fazer-postagem{
+    width:160px;
+    height: 40px;
+    font-size:20px;
+    margin-left:80px;
+}
+
+/*Parte com as postagens e footer*/
+#postagens{
+   display:grid;
+   grid-template-columns: 15% auto 15%;
+   grid-template-rows: auto 150px;
+   justify-items: center;
+   
+}
+
+#item-posts{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height:auto;
+    width:100%;
+}
+
+.posts{
+    margin-top:5px;
+    height:400px;
+    width: 100%;
+    border:1px solid black;
+    background-color: oldlace;
+}
+
+.post-img img{
+    width: 450px;
+    height: 350px;
+    margin: 20px;
+    float: left; 
+}
+
+.data{
+    font-family:cursive;
+    margin-top:-5px;
+    text-align:right;
+}
+
+.post-titulo{
+    font-size:30px;
+    text-align:center;
+}
+
+.leia-mais {
+    width:120px;
+    height:30px;
+    background-color:aqua;
+    float: right;
+    margin-right:10px;
+}
+
+.curtidas{
+    float:right;
+}
+
+#form-post{
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    width: 800px;
+    height:450px;
+    border: 1px solid black;
+    padding:15px;
+    position:fixed;
+    background-color: wheat;
+    display: none;
+
+}
+
+.conteudo{
+    margin-left:15%;
+    margin-right:15%;
+    height:auto;
+    display: none;
+
+}
+
+#conteudo img{
+     width:1000px;
+     height:400px;
+     margin: 0 100px;
+}
+#conteudo p{
+    font-family: arial;
+
+}
+
+.like-counter {
+    color: #000;
+    text-decoration: none;
+    margin-right: 5px;
+  
+  }
+  .liked {
+    font-weight: bold;
+  }
